@@ -10,22 +10,34 @@
     <title>Inicio</title>
 </head>
 
-<body class="container-fluid position-absolute top-50 start-50 translate-middle">
-
-    <div class="card container mb-4" style="width: 18rem;" id="card1">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-            <a class="card-text" href="/calculo">Ejecicio 1</a>
+<body>
+    <nav class="navbar bg-black">
+        <div class="container">
+            <a class="navbar-brand text-light">Bienvenido!</a>
         </div>
-    </div>
+    </nav>
 
-    <div class="card container" style="width: 18rem;"  id="card2">
+    <section class="position-absolute top-50 start-50 translate-middle">
 
-        <img src="" class="card-img-top" alt="...">
-        <div class="card-body">
-            <a class="card-text" href="/login">Ejercicio 2</a>
+        <div class="card container mb-4" style="width: 18rem;" id="card1">
+            <img src="{{ url_for('static', filename='img/#') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <a class="card-text" href="/calculo">
+                    <button type="button" class="btn btn-dark">Ejercicio 1</button>
+                </a>
+            </div>
         </div>
-    </div>
+
+        <div class="card container" style="width: 18rem;" id="card2">
+
+            <img src="{{ url_for('static', filename='img/#') }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <a class="card-text" href="/login">
+                    <button type="button" class="btn btn-dark">Ejercicio 2</button>
+                </a>
+            </div>
+        </div>
+    </section>
 
 
 
