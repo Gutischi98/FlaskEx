@@ -13,7 +13,7 @@
 <body>
     <nav class="navbar bg-black">
         <div class="container">
-            <a class="navbar-brand text-light">Bienvenido!</a>
+            <a class="navbar-brand text-light">Calculo de compras</a>
             <div>
                 <a href="/">
                     <button type="button" class="btn btn-primary me-3">Volver</button>
@@ -22,8 +22,53 @@
         </div>
     </nav>
 
-    <section class="position-absolute top-50 start-50 translate-middle">
+    <section class="position-absolute top-50 start-50 translate-middle my-3">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <form method="post" class=" my-4 container">
+                    <div class="mb-3">
+                      <label for="nombre" class="form-label">Ingresa tu nombre:</label>
+                      <input type="text" name="nombre"  class="form-control" required>
 
+                    </div>
+                      <div class="mb-3">
+                      <label for="edad" class="form-label">Ingresa tu edad:</label>
+                      <input type="text" name="edad"  class="form-control" required>
+
+                    </div>
+                      <div class="mb-3">
+                      <label for="tarros" class="form-label">Ingresa la cantidad de tarros de pintura a comprar:</label>
+                      <input type="number" name="tarros"   class="form-control" required>
+
+                  
+                      {% if resNombre %}
+                      <div class="mb-1">
+                          <p>Nombre: {{ resNombre }}</p>
+                      </div>
+                      {% endif %}
+
+                      {% if resSinDescuento %}
+                      <div class="mb-1">
+                          <p>Total sin descuento: {{ resSinDescuento }}</p>
+                      </div>
+                      {% endif %}
+
+                      {% if resDescuento %}
+                      <div class="mb-1">
+                          <p>Descuento: {{ resDescuento }}</p>
+                      </div>
+                      {% endif %}
+
+                      {% if resTotal %}
+                      <div class="mb-1">
+                          <p>Total a pagar: {{ resTotal }}</p>
+                      </div>
+                      {% endif %}
+                  
+                    <button type="submit" class="btn btn-primary" value="enviar">Submit</button>
+                  </form>
+            </div>
+          </div>
     </section>
 
 
