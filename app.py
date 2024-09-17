@@ -41,12 +41,31 @@ def calculo():
 
 
 
-@app.route('/login')
+@app.route('/login',  methods=['GET', 'POST'])
 def  login():
+    if request.method == "POST":
+        user = request.form['usuario']
+        password = request.form['pass']
+
+        res=None
+        resError=None
+        
+        if user == "pepe" and password == "user":
+            res = f'Bienvenido Usuario {user}'
+        elif user == "juan" and  password == "admin":
+            res = f'Bienvenido Administrador {user}'
+        else:
+            resError = 'Las credenciales no son correctas'
+    
+        return render_template('login.html', res=res, resError=resError)
+    
     return  render_template('login.html')
 
     
 
-
 if  __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
+
+
+#Gustavo Solar
+#Gutischi98

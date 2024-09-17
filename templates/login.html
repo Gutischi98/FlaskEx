@@ -23,6 +23,30 @@
     </nav>
 
     <section class="position-absolute top-50 start-50 translate-middle">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <form method="POST">
+                    <div class="mb-3">
+                      <label for="usuario" class="form-label">Usuario: </label>
+                      <input type="text" class="form-control" name="usuario" required>
+                    </div>
+                    <div class="mb-3">
+                      <label for="pass" class="form-label">Contraseña: </label>
+                      <input type="password" class="form-control" name="pass">
+                    </div>
+
+                    {%if res%}
+                    <p class="p-3 text-primary-emphasis border border-primary-subtle rounded-3">{{ res }}</p>
+                    {% endif %}
+
+                    {%if resError%}
+                    <p class="p-3 text-emphasis bg-danger-subtle border border-danger-subtle rounded-3">{{ resError }}</p>
+                    {% endif %}
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+            </div>
+        </div>
 
     </section>
 
@@ -39,3 +63,6 @@
 </body>
 
 </html>
+
+<!-- #Gustavo Solar
+#Gutischi98-->
