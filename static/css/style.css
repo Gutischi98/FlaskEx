@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: whitesmoke;
+}
+.card {
+    box-shadow: 1rem;
+}
+
+#card1 {
+    background-color: #b00eb0;
+}
+
+#card2 {
+    background-color: #8bc820;
+}
